@@ -9,7 +9,7 @@
 
         <div class="cart-body">
             <div class="header-lined">
-                <h1 class="font-size-36">{$LANG.domaincheckerchoosedomain}</h1>
+                {if $productinfo.name} {$LANG.domaincheckerchoosedomain} for </br> <h1 class="font-size-36">{$productinfo.name}</h1> {else} <h1 class="font-size-36"> {$LANG.domaincheckerchoosedomain}</h1> {/if} 
             </div>
             {include file="orderforms/standard_cart/sidebar-categories-collapsed.tpl"}
             <form id="frmProductDomain">
